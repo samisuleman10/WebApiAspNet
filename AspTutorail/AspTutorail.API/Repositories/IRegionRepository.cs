@@ -5,7 +5,7 @@ namespace AspTutorail.API.Repositories
 
     public interface IRegionRepository
     {
-        IEnumerable<Region> GetAllAsync();
+        Task <IEnumerable<Region>> GetAllAsync();
     }
 
 }

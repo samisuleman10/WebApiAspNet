@@ -13,9 +13,9 @@ namespace AspTutorail.API.Repositories
                 this.nZWalksDbContext = nZWalksDbContext;
             }
 
-            public IEnumerable<Region> GetAllAsync()
+            public async Task<IEnumerable<Region>> GetAllAsync()
             {
-                return nZWalksDbContext.Regions.ToList();
+                return await nZWalksDbContext.Regions.ToListAsync();
             }
     }
 }

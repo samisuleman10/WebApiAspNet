@@ -1,6 +1,4 @@
-﻿using AspTutorail.API.Models.Domain;
-
-namespace AspTutorail.API.Models.DTO
+﻿namespace AspTutorail.API.Models.DTO
 {
     public class Region
     {
@@ -12,7 +10,5 @@ namespace AspTutorail.API.Models.DTO
         public double Long { get; set; }
         public long Population { get; set; }
 
-        // Navigation Property
-        public IEnumerable<Walk> Walks { get; set; }
     }
 }
