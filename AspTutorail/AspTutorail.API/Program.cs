@@ -1,5 +1,6 @@
 
 using AspTutorail.API.Data;
+using AspTutorail.API.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -16,6 +17,8 @@ builder.Services.AddDbContext<AspTutorialDbContext>( options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("AspTutorial"));
 });
+
+builder.Services.AddScoped<IRegionRepository, RegionRepository>();
 
 var app = builder.Build();
 
