@@ -31,6 +31,7 @@ namespace AspTutorail.API.Controllers
 
         [HttpGet]
         [Route("{id:guid}")]
+        [ActionName("GetRegionAsync")]
         public async Task<IActionResult> GetRegionAsync(Guid id)
         {
             var region = await regionRepository.GetAsync(id);
